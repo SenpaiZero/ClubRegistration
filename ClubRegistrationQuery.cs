@@ -46,7 +46,9 @@ namespace ClubRegistration
                 using (sqlConnect)
                 {
                     sqlConnect.ConnectionString = connectionString;
-                    sqlConnect.Open();
+
+                    if (sqlConnect.State != ConnectionState.Open)
+                        sqlConnect.Open();
 
                     sqlCommand = new SqlCommand(ViewClubMembers, sqlConnect);
                     sqlAdapter = new SqlDataAdapter(sqlCommand);

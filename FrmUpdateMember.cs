@@ -26,7 +26,8 @@ namespace ClubRegistration
             con.ConnectionString = sqlCon;
             using (con)
             {
-                con.Open();
+                if (con.State != ConnectionState.Open)
+                    con.Open();
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
                     cmd.Parameters.AddWithValue("@id", studentCB.Text);
@@ -74,7 +75,8 @@ namespace ClubRegistration
             con.ConnectionString = sqlCon;
             using (con)
             {
-                con.Open();
+                if (con.State != ConnectionState.Open)
+                    con.Open();
                 using (SqlCommand cmd = new SqlCommand(updateQuery, con))
                 {
                     cmd.Parameters.AddWithValue("@id", studentID);
@@ -106,7 +108,8 @@ namespace ClubRegistration
             con.ConnectionString = sqlCon;
             using (con)
             {
-                con.Open();
+                if(con.State != ConnectionState.Open)
+                    con.Open();
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
                     cmd.Parameters.AddWithValue("@id", studentCB.Text);
