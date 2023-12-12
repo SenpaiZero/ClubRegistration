@@ -111,6 +111,9 @@
             // genderCB
             // 
             this.genderCB.FormattingEnabled = true;
+            this.genderCB.Items.AddRange(new object[] {
+            "MALE",
+            "FEMALE"});
             this.genderCB.Location = new System.Drawing.Point(32, 274);
             this.genderCB.Name = "genderCB";
             this.genderCB.Size = new System.Drawing.Size(181, 24);
@@ -119,6 +122,11 @@
             // programCB
             // 
             this.programCB.FormattingEnabled = true;
+            this.programCB.Items.AddRange(new object[] {
+            "BSIT",
+            "BSCS",
+            "BSIS",
+            "IT"});
             this.programCB.Location = new System.Drawing.Point(32, 321);
             this.programCB.Name = "programCB";
             this.programCB.Size = new System.Drawing.Size(181, 24);
