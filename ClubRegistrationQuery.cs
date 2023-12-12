@@ -27,7 +27,7 @@ namespace ClubRegistration
         {
             connectionString = $@"Data Source=(LocalDB)\MSSQLLocalDB;
                                 AttachDbFilename={System.Environment.CurrentDirectory}/ClubDB.mdf;
-                                Initial Catalog=CrewConnectDB;
+                                Initial Catalog=ClubDB;
                                 Integrated Security=True";
 
             sqlConnect = new SqlConnection(connectionString);
