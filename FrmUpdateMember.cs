@@ -99,7 +99,7 @@ namespace ClubRegistration
         {
             sqlCon = $@"Data Source=(LocalDB)\MSSQLLocalDB;
                         AttachDbFilename={System.Environment.CurrentDirectory}/ClubDB.mdf;
-                        Initial Catalog=CrewConnectDB;
+                        Initial Catalog=ClubDB;
                         Integrated Security=True";
             con = new SqlConnection(sqlCon);
 
